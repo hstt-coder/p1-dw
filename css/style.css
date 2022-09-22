@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+
+}
+
+
+:root {
+    --primary: #061632;
+    --secondary: #07244A;
+    --blue-1: #2D85C5;
+    --blue-2: #3CA9EE;
+    --medium-blue: #61BDEE;
+    --light-blue: #A5D3EB;
+    --white: #E2E2E2;
+    --dark: #21252f;
+    --gray: #888;
+    --gray-2: #59595B;
+    --box-shadow: 0 8px 22px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    line-height: 1.7;
+
+}
+
+p {
+    font-weight: 500;
+    color: var(--gray-2);
+}
+
+a {
+    color: var(--dark);
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+}
+
+section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.text-blue-1 {
+    color: var(--blue-1);
+}
+
+
+.text-gray {
+    color: var(--gray-2)
+}
+
+
+.navbar {
+    background-color: var(--primary);
+
+}
+
+.navbar .nav-link {
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.navbar .nav-link:hover {
+    color: var(--blue-1);
+}
+
+.logo {
+    color: #fff;
+    font-size: 26px;
+    font-weight: 900;
+    letter-spacing: 5px;
+}
+
+.hero {
+    background-image: url(../img/2954660.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    z-index: 2;
+}
+
+.hero::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(21, 20, 51, .8);
+    z-index: -1;
+}
+
+
+.hero h1 {
+    font-weight: 900;
+}
+
+.my-btn {
+    font-weight: 700;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: var(--blue-1);
+
+    color: #fff;
+    border: none;
+}
+
+.my-btn:hover {
+    background-color: var(--blue-2);
+}
+
+.service {
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.service::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -100%;
+    left: 0;
+    background-color: var(--primary);
+    z-index: -1;
+    opacity: 0;
+    transition: all .9s ease;
+}
+
+
+.service:hover .iconbox {
+    background-color: white;
+    color: var(--primary);
+}
+
+.service:hover h5,
+.service:hover p {
+    color: #fff;
+}
+
+.service:hover::after {
+    opacity: 1;
+    top: 0;
+}
+
+.card-effect {
+    box-shadow: var(--box-shadow);
+    background-color: #fff;
+    padding: 25px;
+    transition: all .35s ease;
+}
+
+.card-effect h5 {
+    color: var(--secondary);
+    font-weight: 500;
+    ;
+}
+
+.card-effect:hover {
+    box-shadow: none;
+    transform: translateY(5px);
+}
+
+.iconbox {
+    width: 54px;
+    height: 54px;
+    background-color: var(--primary);
+    color: #fff;
+    font-size: 32px;
+    border-radius: 100px;
+    flex: none;
+}
+
+.team-member img {
+    width: 125px;
+    height: 125px;
+    border-radius: 100px;
+}
+
+.social-icons a {
+    width: 34px;
+    height: 34px;
+    background-color: var(--primary);
+    border: 2px solid var(--primary);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    margin-left: 5px;
+    transition: all .4s ease;
+}
+
+.social-icons a:hover {
+    color: var(--primary);
+    background-color: transparent;
+
+}
+
+.footer-top {
+    padding-top: 90px;
+    padding-bottom: 90px;
+    background-color: var(--primary);
+    color: rgba(170, 169, 169, 0.807);
+}
+
+.footer-top a {
+    color: rgba(170, 169, 169, 0.807);
+}
+
+.footer-top a:hover {
+    color: #fff;
+}
+
+.footer-bottom {
+    background-color: #061123;
+    color: #fff;
+}
+
+.footer-bottom .social-icons a:hover {
+    color: #fff;
+    border: 2px solid #fff;
+}
